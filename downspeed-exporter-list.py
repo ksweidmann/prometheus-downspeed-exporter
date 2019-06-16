@@ -67,7 +67,7 @@ if __name__ == '__main__':
     metrics = Gauge('speed', 'speed measurment', ['host', 'metric'])
     start_http_server(port=1222, addr='0.0.0.0')
     while True:
-        result = check(hosts=config['hosts'])
+        result = check(hosts=config['targets'])
         for host in result:
             for metric, value in result[host].items():
                 metrics.labels(host, metric).set(value)
