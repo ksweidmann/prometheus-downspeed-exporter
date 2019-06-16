@@ -1,0 +1,8 @@
+{\n
+  "server": "%{remote_ip}",\n
+  "code": %{http_code},\n
+  "size": %{size_download},\n
+  "url":" %{url_effective}",\n
+  "time": "%{time_total}",\n
+  "speed": "%{speed_download}"\n
+}\n
